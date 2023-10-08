@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"restEcho1/configs"
-	"restEcho1/features/users"
+	"CI-CD/configs"
+	"CI-CD/features/users"
 
 	"github.com/labstack/echo/v4"
 )
@@ -10,9 +10,9 @@ import (
 func RouteUser(e *echo.Echo, uc users.UserHandlerInterface, cfg configs.ProgramConfig) {
 	e.POST("/users", uc.Register())
 	e.POST("/login", uc.Login())
-	// e.GET("/users", uc.MyProfile(), echojwt.JWT([]byte(cfg.Secret)))
-	// // e.GET("/users/:id",)
-	// e.POST("/refresh", uc.RefreshToken(), echojwt.JWT([]byte(cfg.RefreshSecret)))
+	e.GET("/users", uc.MyProfile(), echojwt.JWT([]byte(cfg.Secret)))
+	e.GET("/users/:id",)
+	e.POST("/refresh", uc.RefreshToken(), echojwt.JWT([]byte(cfg.RefreshSecret)))
 }
 
 // func RouteBarang(e *echo.Echo, bc controller.BarangControllInterface, cfg configs.ProgramConfig) {
