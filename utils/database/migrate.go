@@ -1,7 +1,7 @@
 package database
 
 import (
-	"restEcho1/features/users/data"
+	"CI-CD/features/users/data"
 
 	"gorm.io/gorm"
 )
