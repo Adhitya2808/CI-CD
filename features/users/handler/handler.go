@@ -2,8 +2,8 @@ package handler
 
 import (
 	"net/http"
-	"restEcho1/features/users"
-	"restEcho1/helper"
+	"CI-CD/features/users"
+	"CI-CD/helper"
 	"strings"
 
 	"github.com/labstack/echo/v4"
