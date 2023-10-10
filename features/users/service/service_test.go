@@ -2,9 +2,9 @@ package service
 
 import (
 	"errors"
-	"restEcho1/features/users"
-	"restEcho1/features/users/mocks"
-	helper "restEcho1/helper/mocks"
+	"CI-CD/features/users"
+	"CI-CD/features/users/mocks"
+	helper "CI-CD/helper/mocks"
 
 	"github.com/stretchr/testify/mock"
 
@@ -19,9 +19,9 @@ func TestRegister(t *testing.T) {
 	data := mocks.NewUserDataInterface(t)
 	service := New(data, generator, jwt)
 	newUser := users.User{
-		Nama:     "jerry",
-		HP:       "12345",
-		Password: "mantul123",
+		Nama:     "Adhitya",
+		HP:       "23467819",
+		Password: "Test132",
 	}
 
 	t.Run("Success insert", func(t *testing.T) {
