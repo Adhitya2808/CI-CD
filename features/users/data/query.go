@@ -1,7 +1,7 @@
 package data
 
 import (
-	"restEcho1/features/users"
+	"CI-CD/features/users"
 
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
